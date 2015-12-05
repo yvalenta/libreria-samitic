@@ -10,6 +10,7 @@ class LibrosController < ApplicationController
   # GET /libros/1
   # GET /libros/1.json
   def show
+    @comentarios = Comentario.where(libro_id: @libro.id)
   end
 
   # GET /libros/new
