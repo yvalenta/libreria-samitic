@@ -1,0 +1,2 @@
+      invoke  active_record
+      remove    db/migrate/20151205041600_add_permiso_to_user.rb
