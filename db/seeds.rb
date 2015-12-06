@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+puts "Eliminando usuarios anteriores de tabla User"
+User.delete_all
+
+admin = {:email => "admin@prueba.com", :profile => 1, :password => "prueba123"}
+
+puts "Guardando usuario administrador #{admin}"
+User.create!(admin)
