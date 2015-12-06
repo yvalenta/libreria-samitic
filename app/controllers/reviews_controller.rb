@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :set_book
 
   # GET /reviews
   # GET /reviews.json
@@ -67,6 +68,9 @@ class ReviewsController < ApplicationController
       @review = Review.find(params[:id])
     end
 
+    def set_book
+      @book = Book.find(params[:book_id])
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
       params.require(:review).permit(:comment, :score, :user_id, :book_id)
