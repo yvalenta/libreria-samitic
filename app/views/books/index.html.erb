@@ -35,6 +35,8 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_book_path,
-            :class => 'btn btn-primary' %>
+<% if User.is_admin? current_user %>
+  <%= link_to t('.new', :default => t("helpers.links.new")),
+              new_book_path,
+              :class => 'btn btn-primary' %>
+<% end %>
