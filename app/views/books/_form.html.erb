@@ -32,14 +32,14 @@
   <div class="form-group">
     <%= f.label :isbn, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.file_field :isbn, :class => 'form-control' %>
+      <%= f.number_field :isbn, :class => 'form-control' %>
     </div>
     <%=f.error_span(:isbn) %>
   </div>
   <div class="form-group">
     <%= f.label :cover, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :cover, :class => 'form-control' %>
+      <%= f.file_field :cover, :class => 'form-control' %>
     </div>
     <%=f.error_span(:cover) %>
   </div>
