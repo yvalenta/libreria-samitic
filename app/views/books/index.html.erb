@@ -20,7 +20,7 @@
         <td><%= book.description %></td>
         <td><%= book.isbn %></td>
         <td><%= book.cover %></td>
-        <td><%=l book.created_at %></td>
+        <td><%=l book.created_at, format: :short %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_book_path(book), :class => 'btn btn-default btn-xs' %>
