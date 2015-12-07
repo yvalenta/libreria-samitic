@@ -26,6 +26,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 # Subir archivos
 gem 'carrierwave'
+
+gem "therubyracer"
+
+gem "twitter-bootstrap-rails"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
