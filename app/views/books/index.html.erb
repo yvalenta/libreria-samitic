@@ -8,7 +8,6 @@
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:isbn) %></th>
-      <th><%= model_class.human_attribute_name(:cover) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -19,7 +18,6 @@
         <td><%= link_to book.title, book_path(book) %></td>
         <td><%= book.description %></td>
         <td><%= book.isbn %></td>
-        <td><%= book.cover %></td>
         <td><%=l book.created_at, format: :short %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
