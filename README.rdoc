@@ -15,3 +15,5 @@
   - Bootstrap
   - Carrierwave
  
+* Publicado en Heroku
+   - https://libreriasamitic.herokuapp.com
