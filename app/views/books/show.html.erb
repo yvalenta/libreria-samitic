@@ -14,7 +14,6 @@
   <dd><%= image_tag @book.cover %></dd>
 </dl>
 
-
 <% if User.is_admin? current_user %>
   <%= link_to t('.back', :default => t("helpers.links.back")),
                 books_path, :class => 'btn btn-default'  %>
