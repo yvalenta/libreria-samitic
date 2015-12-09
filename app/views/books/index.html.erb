@@ -1,0 +1,37 @@
+<%- model_class = Book -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<div class="table-responsive">
+  <table class="table">
+    <% @books.each do |book| %>
+      <div class="row">
+        <div class="col-md-8">
+          <h2><%= link_to book.title, book_path(book) %></h2>
+          <p><b>ISBN: </b> <%= book.isbn %>  -  <b>Created at: </b> <%=l book.created_at, format: :short %></p>
+          <h3><p><b>Description: </b><%= book.description.truncate(90) %></p></h3>
+          <p>
+            <% if User.is_admin? current_user %>
+              <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                          edit_book_path(book), :class => 'btn btn-default btn-xs' %>
+              <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                          book_path(book),
+                          :method => :delete,
+                          :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                          :class => 'btn btn-xs btn-danger' %>
+            <% end %>
+          </p>
+        </div>
+        <div class="col-md-2">
+          <%= image_tag book.cover %>
+        </div>
+        <div class="col-md-2">perro sonso</div>
+      </div>
+    <% end %>
+  </table>
+</div>
+<% if User.is_admin? current_user %>
+  <%= link_to t('.new', :default => t("helpers.links.new")),
+              new_book_path,
+              :class => 'btn btn-primary' %>
+<% end %>
