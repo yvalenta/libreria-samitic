@@ -27,6 +27,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Autenticacion
 gem 'devise'
 # Subir archivos
+gem "rmagick"
+
 gem 'carrierwave'
 
 gem "therubyracer"

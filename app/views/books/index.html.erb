@@ -23,9 +23,8 @@
           </p>
         </div>
         <div class="col-md-2">
-          <%= image_tag book.cover %>
+          <%= image_tag book.cover_url(:thumb) if book.cover? %>
         </div>
-        <div class="col-md-2">perro sonso</div>
       </div>
     <% end %>
   </table>
